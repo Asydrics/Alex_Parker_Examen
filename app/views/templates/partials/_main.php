@@ -11,7 +11,7 @@
               <div class="row">
                 <div class="col-md-12 content-page">
                   <!-- Zone dynamique -->
-                    <!-- <?php //echo $content; ?> -->
+                  <?php echo $content; ?> 
                   <!-- Zone dynamique -->
                 </div>
               </div>
