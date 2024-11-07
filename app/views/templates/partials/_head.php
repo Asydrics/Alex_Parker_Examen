@@ -10,8 +10,9 @@
     <meta name="copyright" content="company name" />
     <meta name="robots" content="index,follow" />
 
-    <title>DevBlog - Personal Blog Template</title>
-    <!-- <base href="<?php //echo BASE_PUBLIC_URL ; ?>"> -->
+    <title><?php echo $title ?></title>
+    <base href="<?php echo BASE_PUBLIC_URL;
+                ?>">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/favicon/favicon.ico">
     <link rel="icon" href="../images/favicon/favicon.ico">
@@ -20,8 +21,7 @@
       rel="apple-touch-icon"
       sizes="144x144"
       type="image/x-icon"
-      href="images/favicon/apple-touch-icon.png"
-    />
+      href="images/favicon/apple-touch-icon.png" />
 
     <!-- All CSS Plugins -->
     <link rel="stylesheet" type="text/css" href="css/plugin.css" />
@@ -30,12 +30,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <!-- Google Web Fonts  -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700"
-    />
-    
+      href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" />
+
 
     <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
     <!--[if lt IE 9]>

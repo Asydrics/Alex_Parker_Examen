@@ -4,26 +4,26 @@ namespace Core\Helpers;
 
 function slugify(string $string): string
 {
-    // Strip html tags
+    // Supprimer les balises HTML
     $string = strip_tags($string);
-    // Replace non letter or digits by -
+    // Remplacer les caractères non alphabétiques ou numériques par des tirets
     $string = preg_replace('~[^\pL\d]+~u', '-', $string);
-    // Transliterate
+    // Translittérer
     setlocale(LC_ALL, 'en_US.utf8');
     $string = iconv('utf-8', 'us-ascii//TRANSLIT', $string);
-    // Remove unwanted characters
+    // Supprimer les caractères indésirables
     $string = preg_replace('~[^-\w]+~', '', $string);
-    // Trim
+    // Supprimer les espaces en début et fin de chaîne
     $string = trim($string, '-');
-    // Remove duplicate -
+    // Supprimer les tirets en double
     $string = preg_replace('~-+~', '-', $string);
-    // Lowercase
+    // Mettre en minuscules
     $string = strtolower($string);
-    // Check if it is empty
+    // Vérifier si la chaîne est vide
     if (empty($string)) {
         return 'n-a';
     }
-    // Return result
+    // Retourner le résultat
     return $string;
 }
 
@@ -31,3 +31,4 @@ function datetime(string $date): string
 {
     return date('j F Y', strtotime($date));
 }
+?>
